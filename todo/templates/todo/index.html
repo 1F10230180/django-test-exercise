@@ -37,6 +37,12 @@
       <a href="{% url 'index' %}?order=post">Sort by Posted Date</a>
     </div>
 
+    <div>
+      <a href="{% url 'index' %}">Show All Tasks</a> |
+      <a href="{% url 'index' %}?completed=true">Show Completed Tasks</a> |
+      <a href="{% url 'index' %}?completed=false">Show Incomplete Tasks</a>
+    </div>
+
     {% for task in tasks %}
     <div class="text" id="area-1">
       <h2><a href="{% url 'detail' task.id %}">{{ task.title }}</a></h2>
