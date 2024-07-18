@@ -15,6 +15,12 @@ def index(request):
         tasks = Task.objects.order_by('due_at')
     else:
         tasks = Task.objects.order_by('-posted_at')
+    
+    filter_completed = request.GET.get('completed')
+    if filter_completed == 'true':
+        tasks = tasks.filter(completed=True)
+    elif filter_completed == 'false':
+        tasks = tasks.filter(completed=False)
 
     context = {
         'tasks': tasks
