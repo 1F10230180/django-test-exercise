@@ -32,15 +32,23 @@
     </form>
     <br>
 
+    <nav>
     <div>
-      <a href="{% url 'index' %}?order=due">Sort by Due Date</a> |
-      <a href="{% url 'index' %}?order=post">Sort by Posted Date</a>
+    <ul>
+      <li class="current"><a href="{% url 'index' %}?order=due"">Sort by Due Date</a></li> |
+      <li><a href="{% url 'index' %}?order=post">Sort by Posted Date</a></li>
+    <ul>
     </div>
 
+    <br>
+
     <div>
-      <a href="{% url 'index' %}">Show All Tasks</a> |
-      <a href="{% url 'index' %}?completed=true">Show Completed Tasks</a> |
-      <a href="{% url 'index' %}?completed=false">Show Incomplete Tasks</a>
+    <ul>
+      <li class="current"><a href="{% url 'index' %}">Show All Tasks</a></li> |
+      <li><a href="{% url 'index' %}?completed=true">Show Completed Tasks</a></li> |
+      <li><a href="{% url 'index' %}?completed=false">Show Incomplete Tasks</a></li>
+    </ul>
+    </nav>
     </div>
 
     {% for task in tasks %}

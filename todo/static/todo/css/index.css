@@ -13,6 +13,34 @@ h1 {
     margin-bottom: 15px;
 }
 
+/*達成,未達成ボタン*/
+nav ul{
+	display: table;
+	margin: 0;
+	padding: 0 ;
+	width: 55%;
+	text-align: center;
+	}
+	nav li{
+	display: table-cell;
+	min-width: 50px;
+	}
+	nav a{
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: #001858;
+	padding-bottom: 5px;
+	}
+	nav li.current{
+	border-bottom: 3px solid #ECEAF0;
+	}
+	nav li:hover{
+	color: #DDBAF8;
+	border-bottom: 3px solid #DDBAF8;
+	}
+
+
 /*スクロールリンクの形状*/
 .scroll-top {
 	/*表示位置*/
@@ -50,7 +78,7 @@ h1 {
 /*リンク全体の aタグの形状*/
 .scroll-top a {
 	text-decoration: none;
-	color: #666;
+	color: #001858;
 	text-transform: uppercase;
 	font-size:0.9rem;
     display: block;
@@ -65,7 +93,7 @@ h1 {
 	right:0;
 	width:1px;
 	height: 50px;
-	background:#666;
+	background:#001858;
 }
 
 .js-scroll a::before {
@@ -75,7 +103,7 @@ h1 {
     right: -6px;
     width: 1px;
     height: 20px;
-    background: #666;
+    background: #001858;
     transform: skewX(-31deg);
 }
 
@@ -93,7 +121,7 @@ _:-ms-lang(x), .js-scroll a::before{
 	right:0;
 	width:1px;
 	height: 50px;
-	background:#666;
+	background:#001858;
 }
 
 .js-pagetop a::before {
@@ -103,7 +131,7 @@ _:-ms-lang(x), .js-scroll a::before{
     right: -6px;
     width: 1px;
     height: 20px;
-    background: #666;
+    background: #001858;
     transform: skewX(31deg);
 }
 
